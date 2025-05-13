@@ -25,7 +25,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/8NUybKs3"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local MainTab = Window:CreateTab("🏠 Home", nil) -- Title, Image
+local MainTab = Window:CreateTab("Credis", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
@@ -54,7 +54,7 @@ if _G.infinJumpStarted == nil then
 	_G.infinJumpStarted = true
 	
 	--Notifies readiness
-	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
+	game.StarterGui:SetCore("SendNotification", {Title="PB2 Glacio_tv | Hub"; Text="Infinite Jump Activated!"; Duration=5;})
 
 	--The actual infinite jump
 	local plr = game:GetService('Players').LocalPlayer
@@ -72,6 +72,10 @@ if _G.infinJumpStarted == nil then
 end
    end,
 })
+local MainTab = Window:CreateTab("🏠 Home", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+local TPTab = Window:CreateTab("LocalPlayer", nil) -- Title, Image
 
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed Slider",
@@ -96,59 +100,3 @@ local Slider = MainTab:CreateSlider({
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
    end,
 })
-
-local Dropdown = MainTab:CreateDropdown({
-   Name = "Select Area",
-   Options = {"Starter World","Pirate Island","Pineapple Paradise"},
-   CurrentOption = {"Starter World"},
-   MultipleOptions = false,
-   Flag = "dropdownarea", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-        print(Option)
-   end,
-})
-
-local Input = MainTab:CreateInput({
-   Name = "Walkspeed",
-   PlaceholderText = "1-500",
-   RemoveTextAfterFocusLost = true,
-   Callback = function(Text)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
-   end,
-})
-
-local OtherSection = MainTab:CreateSection("Other")
-
-local Toggle = MainTab:CreateToggle({
-   Name = "Auto Farm",
-   CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-        print("FARMING")
-   end,
-})
-
-local TPTab = Window:CreateTab("🏝 Teleports", nil) -- Title, Image
-
-local Button1 = TPTab:CreateButton({
-   Name = "Starter Island",
-   Callback = function()
-        --Teleport1
-   end,
-})
-
-local Button2 = TPTab:CreateButton({
-   Name = "Pirate Island",
-   Callback = function()
-        --Teleport2
-   end,
-})
-
-local Button3 = TPTab:CreateButton({
-   Name = "Pineapple Paradise",
-   Callback = function()
-        --Teleport3
-   end,
-})
-
-local TPTab = Window:CreateTab("🎲 Misc", nil) -- Title, Image
