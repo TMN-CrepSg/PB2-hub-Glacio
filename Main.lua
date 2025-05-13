@@ -45,6 +45,22 @@ Rayfield:Notify({
 
 local LocalPlayer = Window:CreateTab("LocalPlayer", nil) -- Title, Image
 
+Rayfield:Notify({
+   Title = "You executed the script",
+   Content = "Very cool gui",
+   Duration = 5,
+   Image = 13047715178,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed Slider",
    Range = {1, 350},
