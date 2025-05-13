@@ -29,8 +29,8 @@ local MainTab = Window:CreateTab("Credis", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Credis")
 
 Rayfield:Notify({
-   Title = "You executed the script",
-   Content = "Very cool gui",
+   Title = "key vaild enjoy the script",
+   Content = "PB2 Glacio_tv",
    Duration = 5,
    Image = 13047715178,
    Actions = { -- Notification Buttons
