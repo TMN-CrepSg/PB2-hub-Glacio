@@ -26,7 +26,6 @@ local Window = Rayfield:CreateWindow({
    }
 })
 local MainTab = Window:CreateTab("credits", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("credits")
 
 Rayfield:Notify({
    Title = "key vaild enjoy the script",
@@ -47,7 +46,7 @@ Rayfield:Notify({
 local LocalPlayer = Window:CreateTab("LocalPlayer", nil) -- Title, Image
 
 
-local Slider = MainTab:CreateSlider({
+local Slider = LocalPlayer:CreateSlider({
    Name = "WalkSpeed Slider",
    Range = {1, 350},
    Increment = 1,
@@ -59,7 +58,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Slider = MainTab:CreateSlider({
+local Slider = LocalPlayer:CreateSlider({
    Name = "JumpPower Slider",
    Range = {1, 350},
    Increment = 1,
@@ -71,7 +70,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
  
- local Button = MainTab:CreateButton({
+ local Button = LocalPlayer:CreateButton({
    Name = "Infinite Jump Toggle",
    Callback = function()
        --Toggles the infinite jump between on or off on every script run
