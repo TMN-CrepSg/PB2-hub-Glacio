@@ -25,8 +25,8 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/8NUybKs3"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local MainTab = Window:CreateTab("Credis", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Credis")
+local MainTab = Window:CreateTab("b", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("a")
 
 Rayfield:Notify({
    Title = "key vaild enjoy the script",
