@@ -27,6 +27,7 @@ local Window = Rayfield:CreateWindow({
 })
 local MainTab = Window:CreateTab("Credis", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Credis")
+
 Rayfield:Notify({
    Title = "You executed the script",
    Content = "Very cool gui",
