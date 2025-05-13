@@ -44,7 +44,7 @@ Rayfield:Notify({
 
 
 local LocalPlayer = Window:CreateTab("LocalPlayer", nil) -- Title, Image
-
+print("get")
 
 local Slider = LocalPlayer:CreateSlider({
    Name = "WalkSpeed Slider",
