@@ -102,7 +102,7 @@ end
 
 local Visual = Window:CreateTab("visuals", nil)
 
-local WeaponChamsToggle = visuals:CreateToggle({
+local Visual = visuals:CreateToggle({
     Name = "Weapon Chams",
     CurrentValue = false,
     Flag = "weaponchamstoggle",
@@ -117,7 +117,7 @@ local WeaponChamsToggle = visuals:CreateToggle({
     end,
 })
 
-local playerweaponcolor = visuals:CreateColorPicker({
+local Visual = visuals:CreateColorPicker({
     Name = "Weapon Color",
     Color = Color3.fromRGB(255,255,255),
     Flag = "weaponcolor", 
