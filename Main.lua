@@ -25,7 +25,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/8NUybKs3"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local MainTab = Window:CreateTab("credits", nil) -- Title, Image
+local credits = Window:CreateTab("credits", nil) -- Title, Image
 
 Rayfield:Notify({
    Title = "key vaild enjoy the script",
@@ -99,3 +99,10 @@ if _G.infinJumpStarted == nil then
 end
    end,
 })
+
+local Visual = Window:CreateTab("viasual", nil)
+
+
+
+
+
