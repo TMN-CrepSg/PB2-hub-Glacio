@@ -101,8 +101,30 @@ end
 })
 
 local Visual = Window:CreateTab("viasual", nil)
+local VisualsSection = SelfTab:CreateSection("Visuals")
 
+local WeaponChamsToggle = SelfTab:CreateToggle({
+    Name = "Weapon Chams",
+    CurrentValue = false,
+    Flag = "weaponchamstoggle",
+    Callback = function(value)
+        if value then
+            weaponchamsconnect = runs.RenderStepped:Connect(playerweaponchams)
+        else
+            if weaponchamsconnect then
+                weaponchamsconnect:Disconnect()
+            end
+        end
+    end,
+})
 
+local playerweaponcolor = SelfTab:CreateColorPicker({
+    Name = "Weapon Color",
+    Color = Color3.fromRGB(255,255,255),
+    Flag = "weaponcolor", 
+    Callback = function(value)
+    end
+})
 
 
 
