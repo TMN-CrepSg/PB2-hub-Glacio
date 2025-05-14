@@ -100,10 +100,9 @@ end
    end,
 })
 
-local Visual = Window:CreateTab("viasual", nil)
-local VisualsSection = SelfTab:CreateSection("Visuals")
+local Visual = Window:CreateTab("visuals", nil)
 
-local WeaponChamsToggle = SelfTab:CreateToggle({
+local WeaponChamsToggle = visuals:CreateToggle({
     Name = "Weapon Chams",
     CurrentValue = false,
     Flag = "weaponchamstoggle",
@@ -118,7 +117,7 @@ local WeaponChamsToggle = SelfTab:CreateToggle({
     end,
 })
 
-local playerweaponcolor = SelfTab:CreateColorPicker({
+local playerweaponcolor = visuals:CreateColorPicker({
     Name = "Weapon Color",
     Color = Color3.fromRGB(255,255,255),
     Flag = "weaponcolor", 
